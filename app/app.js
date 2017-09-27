@@ -1,6 +1,6 @@
 // Include the Main React Dependencies
-var React = require("react");
 var ReactDOM = require("react-dom");
+var React = require("react");
 
 // Include the main Main Component
 var Main = require("./components/Main");

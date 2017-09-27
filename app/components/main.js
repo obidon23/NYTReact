@@ -3,26 +3,30 @@ var React = require("react");
 var ReactDOM = require("react-dom");
 
 // Include the main Child Components
-var Search = require("./components/Search");
-var Results = require("./components/Results");
-var Saved = require("./components/Saved");
+var Search = require("./Search");
+var Results = require("./Results");
+var Saved = require("./Saved");
 
 // construct Main components
 
-var Main=react.createClass() { 
+var Main=React.createClass( {  
 
+    render() {
 
-    .render() {
-        <div className="jumbotron">
-            <h1>Welcome to the New York Times Artice Retriever</h1>
-        </div>
+        return(
+        <div>
+            <div className="jumbotron">
+                <h1>Welcome to the New York Times Artice Retriever</h1>
+            </div>
         
-        <Search />
+            <Search />
 
-        <Results />
+            <Results />
 
-        <Saved />
-    }
-}
+            <Saved />
+        </div>
+        );
+    } 
 
+})
 module.exports = Main;
