@@ -1,11 +1,10 @@
 // Include the Main React Dependencies
-var React = require("react");
-var ReactDOM = require("react-dom");
+import React, {Component} from "react";
 // var mongodb = require("mongo");
 // var mongoose = require("mongoose");
 // construct Saved component
 
-var Saved=React.createClass( { 
+class Saved extends Component { 
 
 // Retreive saved search results from the mongo database    
 
@@ -17,6 +16,6 @@ var Saved=React.createClass( {
         </div>
         )
     }
-})
+}
 
 module.exports = Saved;

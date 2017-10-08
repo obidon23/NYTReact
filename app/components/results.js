@@ -1,22 +1,25 @@
 // Include the Main React Dependencies
-var React = require("react");
-var ReactDOM = require("react-dom");
+import React from "react";
 
 // construct Results component
 
-var Results=React.createClass( { 
-
-
-    render() {
-  
-        return (
-            <div className="col-xs-10 col-xs-offset-1">
+const Results = props => (
+    <div className="col-xs-10 col-xs-offset-1">
+        <div className="panel panel-default">
+            <div className="panel-header">
                 <h2>Search Results Here</h2>
             </div>
-        )
+            <div className="panel-body">
+                {props.articles.map((article, i) => (
+                    <div>
+                       <h3>{article.headline.main}</h3>
+                       <p>{article.multimedia.snippet}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </div>
 
+)
 
-    }
-})
-
-module.exports = Results;
+export default Results;

@@ -1,32 +1,28 @@
 // Include the Main React Dependencies
-var React = require("react");
-var ReactDOM = require("react-dom");
+import React, {Component} from "react";
 
 // construct Search component
 
-var Search=React.createClass( { 
+class Search extends Component { 
 
-
+    
     render() {
         return (
-        <div>
+            <div>
             <div className="col-xs-10 col-xs-offset-1">
-                <h2>Welcome to the New York Times Artice Retriever</h2>
+                <h2>Welcome to the New York Times Article Retriever</h2>
 
                 <form>
-                    {/* <input type="text" name="keyword">
+                    <input type="text" id="keyword" value={this.props.keyword} onChange={this.props.onChange} />
                         <p>Enter a Keyword</p>
-                    </input>            
 
-                    <input type="text" name="startYear">
+                    <input type="text" id="startYear" value={this.props.startYear} onChange={this.props.onChange} />
                         <p>Enter a Starting year</p>
-                    </input>
-
-                    <input type="text" name="endYear">
+ 
+                    <input type="text" id="endYear" value={this.props.endYear} onChange={this.props.onChange} />
                         <p>Enter a End Year</p>
-                    </input>                 */}
 
-                    <button type="submit" className="btn btn-primary">
+                    <button type="submit" className="btn btn-primary" onClick={this.props.getArticles}>
                         Search
                     </button>
                 </form>
@@ -34,6 +30,6 @@ var Search=React.createClass( {
         </div>
         )
     }
-})
+}
 
 module.exports = Search;
